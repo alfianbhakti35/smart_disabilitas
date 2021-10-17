@@ -13,7 +13,7 @@
     
 
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -33,14 +33,14 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
   </head>
   <body>
     
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Carousel</a>
+      <a class="navbar-brand" href="#">Smart Disabilitas</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -56,10 +56,7 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+          <button class="btn btn-success" type="submit">Login</button>
       </div>
     </div>
   </nav>
@@ -207,7 +204,7 @@
 </main>
 
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
       
   </body>
