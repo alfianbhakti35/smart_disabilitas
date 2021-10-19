@@ -52,78 +52,50 @@
                                     <td>Dasar Basis Data</td>
                                     <td>dasar.pdf</td>
                                     <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>
+                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                </tr>   
                                 <tr>
                                     <td>Basis Data</td>
                                     <td>Dasar Basis Data</td>
                                     <td>dasar.pdf</td>
                                     <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>
+                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                </tr>   
                                 <tr>
                                     <td>Basis Data</td>
                                     <td>Dasar Basis Data</td>
                                     <td>dasar.pdf</td>
                                     <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>
+                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                </tr>   
                                 <tr>
                                     <td>Basis Data</td>
                                     <td>Dasar Basis Data</td>
                                     <td>dasar.pdf</td>
                                     <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>
+                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                </tr>   
                                 <tr>
                                     <td>Basis Data</td>
                                     <td>Dasar Basis Data</td>
                                     <td>dasar.pdf</td>
                                     <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>
+                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                </tr>   
                                 <tr>
                                     <td>Basis Data</td>
                                     <td>Dasar Basis Data</td>
                                     <td>dasar.pdf</td>
                                     <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>     
+                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                </tr>   
                                 <tr>
                                     <td>Basis Data</td>
                                     <td>Dasar Basis Data</td>
                                     <td>dasar.pdf</td>
                                     <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>       
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href=""><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>                    
+                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                </tr>   
                             </tbody>
                         </table>
                     </div>

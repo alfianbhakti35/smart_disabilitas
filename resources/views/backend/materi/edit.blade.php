@@ -14,7 +14,7 @@
                 <i class="flaticon-right-arrow"></i>
             </li>
             <li class="nav-item">
-                <a href="#">Tambah Materi</a>
+                <a href="#">Edit Materi</a>
             </li>
         </ul>
     </div>

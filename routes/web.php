@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MateriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,17 +30,11 @@ Route::get('/dashboard', function () {
     ]);
 });
 
-Route::get('/materi', function () {
-    return view('backend/materi/index',[
-        "title" => "Materi"
-    ]);
-});
+Route::get('/materi', [MateriController::class,'index']);
 
-Route::get('/materi_t', function () {
-    return view('backend/materi/tambah',[
-        "title" => "Materi"
-    ]);
-});
+Route::get('/materi_t',[MateriController::class,'tambah']);
+
+Route::get('/materi_e',[MateriController::class,'edit']);
 
 Route::get('/mata_kuliah', function () {
     return view('backend/matkul/index',[
