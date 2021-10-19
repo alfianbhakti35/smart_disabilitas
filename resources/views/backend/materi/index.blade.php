@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Materi</h4>
-                    <button class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</button>
+                    <a href="/materi_t" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

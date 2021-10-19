@@ -57,43 +57,37 @@
                 </li>
                 <li class="nav-item {{ ($title === "Mata Kuliah") ? 'active' : '' }}">
                     <a href="#">
-                        <i class="
-                        fas fa-layer-group"></i>
+                        <i class="fas fa-list-alt"></i>
                         <p>Mata Kuliah</p>
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Kelas") ? 'active' : '' }}">
                     <a href="#">
-                        <i class="
-                        fas fa-layer-group"></i>
+                        <i class="fas fa-chalkboard-teacher"></i>
                         <p>Kelas</p>
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Fakultas") ? 'active' : '' }}">
                     <a href="#">
-                        <i class="
-                        fas fa-layer-group"></i>
+                        <i class="fas fa-university"></i>
                         <p>Fakultas</p>
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Prodi") ? 'active' : '' }}">
                     <a href="#">
-                        <i class="
-                        fas fa-layer-group"></i>
+                        <i class="fas fa-suitcase"></i>
                         <p>Prodi</p>
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Mahasiswa") ? 'active' : '' }}">
                     <a href="#">
-                        <i class="
-                        fas fa-layer-group"></i>
+                        <i class="fas fa-book-reader"></i>
                         <p>Pengguna</p>
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Akun") ? 'active' : '' }}">
                     <a href="#">
-                        <i class="
-                        fas fa-layer-group"></i>
+                        <i class="fas fa-user-friends"></i>
                         <p>Akun</p>
                     </a>
                 </li>
