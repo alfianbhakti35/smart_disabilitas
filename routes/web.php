@@ -3,6 +3,8 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MateriController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegistrasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +73,7 @@ Route::get('/akun', function () {
         "title" => "Akun"
     ]);
 });
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/registrasi', [RegistrasiController::class, 'index']);
+Route::post('/registrasi', [RegistrasiController::class, 'registrsiMahasiswa']);
