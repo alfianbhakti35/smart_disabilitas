@@ -79,14 +79,14 @@
                         <p>Prodi</p>
                     </a>
                 </li>
-                <li class="nav-item {{ ($title === "Mahasiswa") ? 'active' : '' }}">
-                    <a href="#">
+                <li class="nav-item {{ ($title === "Pengguna") ? 'active' : '' }}">
+                    <a href="/pengguna">
                         <i class="fas fa-book-reader"></i>
                         <p>Pengguna</p>
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Akun") ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="/akun">
                         <i class="fas fa-user-friends"></i>
                         <p>Akun</p>
                     </a>

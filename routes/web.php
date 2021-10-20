@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AkunController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MateriController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PenggunaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,14 +62,14 @@ Route::get('/prodi', function () {
     ]);
 });
 
-Route::get('/mahasiswa', function () {
-    return view('backend/mahasiswa/index',[
-        "title" => "Mahasiswa"
-    ]);
-});
+Route::get('/pengguna', [PenggunaController::class,'index']);
 
-Route::get('/akun', function () {
-    return view('backend/akun/index',[
-        "title" => "Akun"
-    ]);
-});
+Route::get('/penggunae', [PenggunaController::class,'edit']);
+    
+Route::get('/penggunat',[PenggunaController::class,'tambah']);
+
+Route::get('/akun',[AkunController::class,'index']); 
+
+Route::get('/akune',[AkunController::class,'edit']); 
+
+Route::get('/akunt',[AkunController::class,'tambah']); 
