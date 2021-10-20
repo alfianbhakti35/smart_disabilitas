@@ -14,7 +14,7 @@
                 <i class="flaticon-right-arrow"></i>
             </li>
             <li class="nav-item">
-                <a href="/akune"> edit Pengguna</a>
+                <a href="/akun_e"> edit Pengguna</a>
             </li>
         </ul>
     </div>
@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="/akunt" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
+                    <a href="/akun_t" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -51,35 +51,35 @@
                                     <th>nama</th>
                                     <th>*******</th>
                                     <th>Dosen/Mahasiswa/Admin</th>
-                                    <td><a href="/akune"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/akun_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr> 
                                 <tr>
                                     <th>0</th>
                                     <th>nama</th>
                                     <th>*******</th>
                                     <th>Dosen/Mahasiswa/Admin</th>
-                                    <td><a href="/akune"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/akun_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr> 
                                 <tr>
                                     <th>0</th>
                                     <th>nama</th>
                                     <th>*******</th>
                                     <th>Dosen/Mahasiswa/Admin</th>
-                                    <td><a href="/akune"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/akun_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr> 
                                 <tr>
                                     <th>0</th>
                                     <th>nama</th>
                                     <th>*******</th>
                                     <th>Dosen/Mahasiswa/Admin</th>
-                                    <td><a href="/akune"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/akun_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr> 
                                 <tr>
                                     <th>0</th>
                                     <th>nama</th>
                                     <th>*******</th>
                                     <th>Dosen/Mahasiswa/Admin</th>
-                                    <td><a href="/akune"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/akun_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr>  
                             </tbody>
                         </table>

@@ -68,12 +68,12 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/registrasi', [RegistrasiController::class, 'index']);
 Route::post('/registrasi', [RegistrasiController::class, 'registrsiMahasiswa']);
-Route::get('/penggunae', [PenggunaController::class,'edit']);
+Route::get('/pengguna_e', [PenggunaController::class,'edit']);
     
-Route::get('/penggunat',[PenggunaController::class,'tambah']);
+Route::get('/pengguna_t',[PenggunaController::class,'tambah']);
 
 Route::get('/akun',[AkunController::class,'index']); 
 
-Route::get('/akune',[AkunController::class,'edit']); 
+Route::get('/akun_e',[AkunController::class,'edit']); 
 
-Route::get('/akunt',[AkunController::class,'tambah']); 
+Route::get('/akun_t',[AkunController::class,'tambah']); 
