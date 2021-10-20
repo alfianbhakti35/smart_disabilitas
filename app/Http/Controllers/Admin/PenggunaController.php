@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class PenggunaController extends Controller
 {
@@ -15,7 +16,7 @@ class PenggunaController extends Controller
     }
 
     
-    public function tambah()
+    public function create()
     {
         return view('backend/pengguna/tambah',[
             "title" => "Pengguna"
@@ -40,10 +41,6 @@ class PenggunaController extends Controller
         //
     }
 
-   
-   
-
-    
     public function update(Request $request, $id)
     {
         //

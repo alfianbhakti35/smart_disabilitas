@@ -25,7 +25,7 @@
                     <a href="/materi" class="btn btn-warning float-right"><i class="fas fa-angle-left"></i> Kembali</a>
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form action="/materi_s" method="post" enctype="multipart/form-data">
                        <div class="form-group">
                            <label for="matkul">Mata Kuliah</label>
                            <select class="form-control" name="matkul" id="" >

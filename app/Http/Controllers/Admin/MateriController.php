@@ -22,13 +22,6 @@ class MateriController extends Controller
         echo Pdf::getText('book.pdf', $path);
     }
 
-    public function tambah()
-    {
-        return view('backend/materi/tambah',[
-            "title" => "Materi"
-        ]);
-    }
-
     public function edit()
     {
         return view('backend/materi/edit',[
@@ -38,13 +31,21 @@ class MateriController extends Controller
     
     public function create()
     {
-        //
+        return view('backend/materi/tambah',[
+            "title" => "Materi"
+        ]);
     }
 
     
     public function store(Request $request)
     {
-        //
+        ddd($request);
+        $validatedDate = $request->validate([
+            'matkul_id'  => 'required',
+            'judul_materi' => 'reuqied|unique:materi_models',
+            'file_materi' => 'required',
+            'jenis_materi' => 'required'
+        ]);
     }
 
     public function update(Request $request, MateriController $materiController)

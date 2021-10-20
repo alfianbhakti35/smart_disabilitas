@@ -17,38 +17,38 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/dashboard',[AdminController::class,'index']);
 
 Route::get('/materi', [MateriController::class,'index']);
-Route::get('/materi_t',[MateriController::class,'tambah']);
-Route::get('/materi_e',[MateriController::class,'edit']);
+Route::get('/materi_t',[MateriController::class,'create']);
+Route::post('/materi_e',[MateriController::class,'edit']);
+Route::post('/materi_s',[MateriController::class,'store']);
 
 
-
-Route::get('/mata_kuliah', function () {
+Route::post('/mata_kuliah', function () {
     return view('backend/matkul/index',[
         "title" => "Mata Kuliah"
     ]);
 });
 
-Route::get('/kelas', function () {
+Route::post('/kelas', function () {
     return view('backend/kelas/index',[
         "title" => "Kelas"
     ]);
 });
 
 Route::get('/fakultas', [FakultasController::class,'index']);
-Route::get('/fakultas_t', [FakultasController::class,'tambah']);
-Route::get('/fakultas_e', [FakultasController::class,'edit']);
+Route::post('/fakultas_t', [FakultasController::class,'create']);
+Route::post('/fakultas_e', [FakultasController::class,'edit']);
 
 Route::get('/prodi', [ProdiController::class,'index']);
-Route::get('/prodi_t', [ProdiController::class,'tambah']);
-Route::get('/prodi_e', [ProdiController::class,'edit']);
+Route::post('/prodi_t', [ProdiController::class,'create']);
+Route::post('/prodi_e', [ProdiController::class,'edit']);
 
 Route::get('/pengguna',[PenggunaController::class,'index']);
-Route::get('/pengguna_e', [PenggunaController::class,'edit']);
-Route::get('/pengguna_t',[PenggunaController::class,'tambah']);
+Route::post('/pengguna_e', [PenggunaController::class,'edit']);
+Route::post('/pengguna_t',[PenggunaController::class,'create']);
 
 Route::get('/akun',[AkunController::class,'index']); 
-Route::get('/akun_e',[AkunController::class,'edit']); 
-Route::get('/akun_t',[AkunController::class,'tambah']); 
+Route::post('/akun_e',[AkunController::class,'edit']); 
+Route::post('/akun_t',[AkunController::class,'create']); 
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);

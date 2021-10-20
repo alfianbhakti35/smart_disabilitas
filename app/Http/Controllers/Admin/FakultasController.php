@@ -15,7 +15,7 @@ class FakultasController extends Controller
         ]);
     }
 
-    public function tambah()
+    public function create()
     {
         return view('backend/fakultas/tambah',[
             "title" => "Fakultas"
