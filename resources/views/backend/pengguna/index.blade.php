@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="/penggunat" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
+                    <a href="/pengguna_t" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -63,7 +63,7 @@
                                     <td>alamat</td>
                                     <td>Fakultas</td>
                                     <td>Prodi</td>
-                                    <td><a href="/penggunae"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/pengguna_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr> 
                                 <tr>
                                     <td>1</td>
@@ -74,7 +74,7 @@
                                     <td>alamat</td>
                                     <td>Fakultas</td>
                                     <td>Prodi</td>
-                                    <td><a href="/penggunae"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/pengguna_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr> 
                                 <tr>
                                     <td>1</td>
@@ -85,7 +85,7 @@
                                     <td>alamat</td>
                                     <td>Fakultas</td>
                                     <td>Prodi</td>
-                                    <td><a href="/penggunae"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/pengguna_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr> 
                                 <tr>
                                     <td>1</td>
@@ -96,7 +96,7 @@
                                     <td>alamat</td>
                                     <td>Fakultas</td>
                                     <td>Prodi</td>
-                                    <td><a href="/penggunae"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/pengguna_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr> 
                                 <tr>
                                     <td>1</td>
@@ -107,7 +107,7 @@
                                     <td>alamat</td>
                                     <td>Fakultas</td>
                                     <td>Prodi</td>
-                                    <td><a href="/penggunae"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/pengguna_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr> 
                                 <tr>
                                     <td>1</td>
@@ -118,7 +118,7 @@
                                     <td>alamat</td>
                                     <td>Fakultas</td>
                                     <td>Prodi</td>
-                                    <td><a href="/penggunae"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/pengguna_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr>   
                                 <tr>
                                     <td>1</td>
@@ -129,7 +129,7 @@
                                     <td>alamat</td>
                                     <td>Fakultas</td>
                                     <td>Prodi</td>
-                                    <td><a href="/penggunae"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td><a href="/pengguna_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
                                 </tr>   
                                    
                             </tbody>
