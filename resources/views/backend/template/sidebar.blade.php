@@ -80,13 +80,13 @@
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Pengguna") ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="/pengguna">
                         <i class="fas fa-book-reader"></i>
                         <p>Pengguna</p>
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Akun") ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="/akun">
                         <i class="fas fa-user-friends"></i>
                         <p>Akun</p>
                     </a>

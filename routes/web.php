@@ -1,12 +1,15 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AkunController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\MateriController;
 use App\Http\Controllers\FakultasController;
-use App\Http\Controllers\ProdiController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\RegistrasiController;
+
 
 
 Route::get('/', [HomeController::class, 'index']);
@@ -53,11 +56,7 @@ Route::get('/prodi', [ProdiController::class,'index']);
 Route::get('/prodi_t', [ProdiController::class,'tambah']);
 Route::get('/prodi_e', [ProdiController::class,'edit']);
 
-Route::get('/mahasiswa', function () {
-    return view('backend/mahasiswa/index',[
-        "title" => "Mahasiswa"
-    ]);
-});
+Route::get('/pengguna', [PenggunaController::class,'index']);
 
 Route::get('/akun', function () {
     return view('backend/akun/index',[
@@ -69,3 +68,12 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/registrasi', [RegistrasiController::class, 'index']);
 Route::post('/registrasi', [RegistrasiController::class, 'registrsiMahasiswa']);
+Route::get('/penggunae', [PenggunaController::class,'edit']);
+    
+Route::get('/penggunat',[PenggunaController::class,'tambah']);
+
+Route::get('/akun',[AkunController::class,'index']); 
+
+Route::get('/akune',[AkunController::class,'edit']); 
+
+Route::get('/akunt',[AkunController::class,'tambah']); 
