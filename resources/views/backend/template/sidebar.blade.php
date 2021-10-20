@@ -68,13 +68,13 @@
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Fakultas") ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="/fakultas">
                         <i class="fas fa-university"></i>
                         <p>Fakultas</p>
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Prodi") ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="/prodi">
                         <i class="fas fa-suitcase"></i>
                         <p>Prodi</p>
                     </a>

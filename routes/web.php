@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\FakultasController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MateriController;
+use App\Http\Controllers\ProdiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +38,8 @@ Route::get('/materi_t',[MateriController::class,'tambah']);
 
 Route::get('/materi_e',[MateriController::class,'edit']);
 
+
+
 Route::get('/mata_kuliah', function () {
     return view('backend/matkul/index',[
         "title" => "Mata Kuliah"
@@ -48,17 +52,14 @@ Route::get('/kelas', function () {
     ]);
 });
 
-Route::get('/fakultas', function () {
-    return view('backend/fakultas/index',[
-        "title" => "Fakultas"
-    ]);
-});
+Route::get('/fakultas', [FakultasController::class,'index']);
+Route::get('/fakultas_t', [FakultasController::class,'tambah']);
+Route::get('/fakultas_e', [FakultasController::class,'edit']);
 
-Route::get('/prodi', function () {
-    return view('backend/prodi/index',[
-        "title" => "Prodi"
-    ]);
-});
+
+Route::get('/prodi', [ProdiController::class,'index']);
+Route::get('/prodi_t', [ProdiController::class,'tambah']);
+Route::get('/prodi_e', [ProdiController::class,'edit']);
 
 Route::get('/mahasiswa', function () {
     return view('backend/mahasiswa/index',[
