@@ -30,7 +30,7 @@ Route::get('/dashboard', function () {
     ]);
 });
 
-Route::get('/materi', [MateriController::class,'index']);
+Route::get('/materi', [MateriController::class,'pdfTotext']);
 
 Route::get('/materi_t',[MateriController::class,'tambah']);
 

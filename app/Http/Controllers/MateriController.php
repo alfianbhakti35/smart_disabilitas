@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Spatie\PdfToText\Pdf;
 
 class MateriController extends Controller
 {
@@ -13,6 +14,12 @@ class MateriController extends Controller
         return view('backend/materi/index',[
             "title" => "Materi"
         ]);
+    }
+
+    public function pdfTotext()
+    {
+        $path = 'c:/Program Files/Git/mingw64/bin/pdftotext';
+        echo Pdf::getText('book.pdf', $path);
     }
 
     public function tambah()

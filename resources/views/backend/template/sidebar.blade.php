@@ -79,7 +79,7 @@
                         <p>Prodi</p>
                     </a>
                 </li>
-                <li class="nav-item {{ ($title === "Mahasiswa") ? 'active' : '' }}">
+                <li class="nav-item {{ ($title === "Pengguna") ? 'active' : '' }}">
                     <a href="#">
                         <i class="fas fa-book-reader"></i>
                         <p>Pengguna</p>
