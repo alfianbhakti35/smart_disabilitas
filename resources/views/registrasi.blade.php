@@ -36,10 +36,16 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form action="/login" method="POST">
+  <form action="/registrasi" method="POST">
     @csrf
     <img class="mb-4" src="assets/img/logo.png" alt="" width="80" height="80">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">Registrasi</h1>
+
+
+    <div class="form-floating">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Nama" autocomplete="off">
+        <label for="nama">Nama</label>
+    </div>
 
     <div class="form-floating">
       <input type="text" class="form-control" id="username" name="username" placeholder="Username" autocomplete="off">
@@ -49,6 +55,8 @@
       <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
       <label for="password">Password</label>
     </div>
+
+    <input type="text" class="form-control" id="role" name="role" placeholder="Password" required hidden value="mahasiswa">
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; Smart Disabilitas | 2021</p>
