@@ -2,20 +2,12 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MateriController;
+use App\Http\Controllers\FakultasController;
+use App\Http\Controllers\ProdiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistrasiController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -38,6 +30,8 @@ Route::get('/materi_t',[MateriController::class,'tambah']);
 
 Route::get('/materi_e',[MateriController::class,'edit']);
 
+
+
 Route::get('/mata_kuliah', function () {
     return view('backend/matkul/index',[
         "title" => "Mata Kuliah"
@@ -50,17 +44,14 @@ Route::get('/kelas', function () {
     ]);
 });
 
-Route::get('/fakultas', function () {
-    return view('backend/fakultas/index',[
-        "title" => "Fakultas"
-    ]);
-});
+Route::get('/fakultas', [FakultasController::class,'index']);
+Route::get('/fakultas_t', [FakultasController::class,'tambah']);
+Route::get('/fakultas_e', [FakultasController::class,'edit']);
 
-Route::get('/prodi', function () {
-    return view('backend/prodi/index',[
-        "title" => "Prodi"
-    ]);
-});
+
+Route::get('/prodi', [ProdiController::class,'index']);
+Route::get('/prodi_t', [ProdiController::class,'tambah']);
+Route::get('/prodi_e', [ProdiController::class,'edit']);
 
 Route::get('/mahasiswa', function () {
     return view('backend/mahasiswa/index',[
@@ -73,6 +64,7 @@ Route::get('/akun', function () {
         "title" => "Akun"
     ]);
 });
+
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/registrasi', [RegistrasiController::class, 'index']);
