@@ -56,13 +56,13 @@
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Mata Kuliah") ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="/matkul">
                         <i class="fas fa-list-alt"></i>
                         <p>Mata Kuliah</p>
                     </a>
                 </li>
                 <li class="nav-item {{ ($title === "Kelas") ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="/kelas">
                         <i class="fas fa-chalkboard-teacher"></i>
                         <p>Kelas</p>
                     </a>

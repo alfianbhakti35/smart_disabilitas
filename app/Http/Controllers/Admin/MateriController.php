@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Admin\MateriModel;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Spatie\PdfToText\Pdf;
 
@@ -39,13 +41,18 @@ class MateriController extends Controller
     
     public function store(Request $request)
     {
-        ddd($request);
+        return $request->file('file_materi')->store('materi-pdf');
+
         $validatedDate = $request->validate([
             'matkul_id'  => 'required',
-            'judul_materi' => 'reuqied|unique:materi_models',
+            'judul_materi' => 'required|unique:materi_models',
             'file_materi' => 'required',
             'jenis_materi' => 'required'
         ]);
+
+        MateriModel::create($validatedDate);
+
+        return redirect('/dashboard')->with('success','New materi has been addedd!');
     }
 
     public function update(Request $request, MateriController $materiController)

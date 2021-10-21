@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Fakultas;
+use App\Http\Controllers;
+use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
 class FakultasController extends Controller

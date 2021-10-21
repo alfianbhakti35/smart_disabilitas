@@ -26,27 +26,28 @@
                 </div>
                 <div class="card-body">
                     <form action="/materi_s" method="post" enctype="multipart/form-data">
+                        @csrf
                        <div class="form-group">
                            <label for="matkul">Mata Kuliah</label>
-                           <select class="form-control" name="matkul" id="" >
+                           <select class="form-control" name="matkul_id" id="matkul_id" >
                                <option value="">~ Pilih Mata kuliah ~</option>
-                               <option value="">Basis data</option>
-                               <option value="">Basis data</option>
-                               <option value="">Basis data</option>
-                               <option value="">Basis data</option>
+                               <option value="1">Basis data</option>
+                               <option value="2">Basis data</option>
+                               <option value="3">Basis data</option>
+                               <option value="4">Basis data</option>
                            </select>
                        </div>
                        <div class="form-group">
                            <label for="judul">Judul Materi</label>
-                           <input type="text" name="matkul" id="" placeholder="Mata Kuliah" class="form-control">
+                           <input type="text" name="judul_materi" id="judul_materi" placeholder="Mata Kuliah" class="form-control">
                        </div>
                         <div class="form-group">
                             <label for="file_m">File Materi</label>
-                            <input type="file" name="file_m" id="" placeholder="File Materi" class="form-control">
+                            <input type="file" name="file_materi" id="file_materi" placeholder="File Materi" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="jenis_m">Jenis Materi</label>
-                            <input type="text" name="jenis_m" id="" placeholder="Jenis Materi" class="form-control">
+                            <input type="text" name="jenis_materi" id="jenis_materi" placeholder="Jenis Materi" class="form-control">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Simpan</button>

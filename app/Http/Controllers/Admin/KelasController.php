@@ -3,26 +3,41 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Http\Request;
 
-class ProdiController extends Controller
+class KelasController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return view('backend/prodi/index',[
-            "title" => "Prodi"
+        return view('backend/kelas/index',[
+            "title" => "Kelas"
         ]);
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        return view('backend/prodi/tambah',[
-            "title" => "Prodi"
+        return view('backend/kelas/tambah',[
+            "title" => "Kelas"
         ]);
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
         //
@@ -47,8 +62,8 @@ class ProdiController extends Controller
      */
     public function edit()
     {
-        return view('backend/prodi/tambah',[
-            "title" => "Prodi"
+        return view('backend/kelas/edit',[
+            "title" => "Kelas"
         ]);
     }
 

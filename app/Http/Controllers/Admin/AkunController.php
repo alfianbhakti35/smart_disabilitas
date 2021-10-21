@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers;
+use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
 class AkunController extends Controller
