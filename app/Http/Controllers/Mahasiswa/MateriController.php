@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Mahasiswa;
 
-use App\Models\Admin\MateriModel;
+use App\Http\Controllers;
+use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
-class MateriModelController extends Controller
+class MateriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,23 @@ class MateriModelController extends Controller
      */
     public function index()
     {
-        //
+        return view('mahasiswa/materi/materi',[
+            "title" => "Materi"
+        ]);
+    }
+
+    public function listmateri()
+    {
+        return view('mahasiswa/materi/list_materi',[
+            "title" => "Materi"
+        ]);
+    }
+
+    public function detailmateri()
+    {
+        return view('mahasiswa/materi/detail_materi',[
+            "title" => "Materi"
+        ]);
     }
 
     /**
@@ -41,10 +58,10 @@ class MateriModelController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Admin\MateriModel  $materiModel
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(MateriModel $materiModel)
+    public function show($id)
     {
         //
     }
@@ -52,10 +69,10 @@ class MateriModelController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Admin\MateriModel  $materiModel
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(MateriModel $materiModel)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +81,10 @@ class MateriModelController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Admin\MateriModel  $materiModel
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, MateriModel $materiModel)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +92,10 @@ class MateriModelController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Admin\MateriModel  $materiModel
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(MateriModel $materiModel)
+    public function destroy($id)
     {
         //
     }
