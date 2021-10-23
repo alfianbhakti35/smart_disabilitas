@@ -23,49 +23,39 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Fakultas</h4>
-                    <a href="/fakultas_t" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
+                    <a href="/fakultas/create" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="basic-datatables" class="display table table-striped table-hover" >
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Nama Fakultas</th>
                                     <th>Kode</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
+                                    <th>#</th>
                                     <th>Nama Fakultas</th>
                                     <th>Kode</th>                              
                                 </tr>
                             </tfoot>
                             <tbody>
+                                @foreach ($fakultas as $fakultas)
                                 <tr>
-                                    <td>Teknik</td>
-                                    <td>T001</td>
-                                    <td><a href="/fakultas_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>  
-                                <tr>
-                                    <td>Teknik</td>
-                                    <td>T001</td>
-                                    <td><a href="/fakultas_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $fakultas->nama }}</td>
+                                    <td>{{ $fakultas->kode }}</td>
+                                    <td><a href="/fakultas/{{ $fakultas->id }}/edit"><i class="fas fa-edit"></i> Edit</a> | 
+                                        <form action="/fakultas/{{ $fakultas->id }}" method="post" class="d-inline">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="text-danger bg-transparent border-0" onclick="return confirm('Yakin ingin mengahpus?')"><i class="fas fa-trash-alt"></i> Hapus</button>
+                                        </form>
                                 </tr>   
-                                <tr>
-                                    <td>Teknik</td>
-                                    <td>T001</td>
-                                    <td><a href="/fakultas_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>   
-                                <tr>
-                                    <td>Teknik</td>
-                                    <td>T001</td>
-                                    <td><a href="/fakultas_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>   
-                                <tr>
-                                    <td>Teknik</td>
-                                    <td>T001</td>
-                                    <td><a href="/fakultas_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>   
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
