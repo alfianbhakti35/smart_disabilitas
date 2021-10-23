@@ -23,13 +23,14 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Materi</h4>
-                    <a href="/materi_t" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
+                    <a href="/materi/create" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="basic-datatables" class="display table table-striped table-hover" >
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Mata Kuliah</th>
                                     <th>Judul</th>
                                     <th>File</th>
@@ -39,6 +40,7 @@
                             </thead>
                             <tfoot>
                                 <tr>
+                                    <th>#</th>
                                     <th>Mata Kuliah</th>
                                     <th>Judul</th>
                                     <th>File</th>
@@ -47,55 +49,21 @@
                                 </tr>
                             </tfoot>
                             <tbody>
+                                @foreach ($materi as $materi)
                                 <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $materi->matkul_id }}</td>
+                                    <td>{{ $materi->judul_materi }}</td>
+                                    <td><a href="{{ $materi->file_materi }}">{{ $materi->judul_materi }}.pdf</a></td>
+                                    <td>{{ $materi->jenis_materi }}</td>
+                                    <td><a href="/materi/{{ $materi->id }}/edit"><i class="fas fa-edit"></i> Edit</a> | 
+                                        <form action="/materi/{{ $materi->id }}" method="post" class="d-inline">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="text-danger bg-transparent border-0" onclick="return confirm('Yakin ingin mengahpus?')"><i class="fas fa-trash-alt"></i> Hapus</button>
+                                        </form>
                                 </tr>   
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>   
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>   
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>   
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>   
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>   
-                                <tr>
-                                    <td>Basis Data</td>
-                                    <td>Dasar Basis Data</td>
-                                    <td>dasar.pdf</td>
-                                    <td>pdf</td>
-                                    <td><a href="/materi_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>   
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

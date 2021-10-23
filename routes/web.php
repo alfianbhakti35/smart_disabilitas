@@ -21,10 +21,11 @@ Route::get('/', [HomeController::class, 'index']);
 // Admin
 Route::get('/dashboard',[AdminController::class,'index']);
 
-Route::get('/materi', [MateriController::class,'index']);
-Route::get('/materi_t',[MateriController::class,'create']);
-Route::get('/materi_e',[MateriController::class,'edit']);
-Route::post('/materi_s',[MateriController::class,'store']);
+Route::resource('/materi', MateriController::class);
+// Route::get('/materi', [MateriController::class,'index']);
+// Route::get('/materi_t',[MateriController::class,'create']);
+// Route::get('/materi_e',[MateriController::class,'edit']);
+// Route::post('/materi_s',[MateriController::class,'store']);
 
 Route::get('/matkul', [MatkulController::class, 'index']);
 Route::get('/matkul_t', [MatkulController::class, 'create']);
