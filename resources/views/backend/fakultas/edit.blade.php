@@ -28,6 +28,24 @@
                     <form method="post" action="/fakultas/{{ $fakultas->id }}" enctype="multipart/form-data">
                         @method('put')
                         @csrf
+                        <div class="form-group">
+                            <label for="fakultas">Fakultas</label>
+                            <select class="form-control @error('fakultas_id') is-invalid @enderror" name="fakultas_id" id="fakultas_id" autofocus>
+                                <option value="">~ Pilih Fakultas ~</option>
+                            @foreach ($fakultas as $fakultas)
+                                 @if (old('fakultas_id') == $fakultas->id)
+                                 <option value="{{ $fakultas->id }}" selected>{{ $fakultas->nama }}</option>
+                                 @else
+                                 <option value="{{ $fakultas->id }}">{{ $fakultas->nama }}</option>
+                                 @endif
+                             @endforeach
+                            </select>
+                            @error('fakultas_id')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
                        <div class="form-group">
                            <label for="nama">nama fakultas</label>
                            <input type="text" name="nama" id="nama" placeholder="nama fakultas" class="form-control  @error('nama') is-invalid @enderror" value="{{ old('nama', $fakultas->nama) }}">

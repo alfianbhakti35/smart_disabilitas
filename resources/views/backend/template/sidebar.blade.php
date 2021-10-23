@@ -55,37 +55,37 @@
                         <p>Materi</p>
                     </a>
                 </li>
-                <li class="nav-item {{ Request::is('matkul') ? 'active' : '' }}">
+                <li class="nav-item {{ Request::is('matkul*') ? 'active' : '' }}">
                     <a href="/matkul">
                         <i class="fas fa-list-alt"></i>
                         <p>Mata Kuliah</p>
                     </a>
                 </li>
-                <li class="nav-item {{ Request::is('kelas') ? 'active' : '' }}">
+                <li class="nav-item {{ Request::is('kelas*') ? 'active' : '' }}">
                     <a href="/kelas">
                         <i class="fas fa-chalkboard-teacher"></i>
                         <p>Kelas</p>
                     </a>
                 </li>
-                <li class="nav-item {{ Request::is('fakultas') ? 'active' : '' }}">
+                <li class="nav-item {{ Request::is('fakultas*') ? 'active' : '' }}">
                     <a href="/fakultas">
                         <i class="fas fa-university"></i>
                         <p>Fakultas</p>
                     </a>
                 </li>
-                <li class="nav-item {{ Request::is('prodi') ? 'active' : '' }}">
+                <li class="nav-item {{ Request::is('prodi*') ? 'active' : '' }}">
                     <a href="/prodi">
                         <i class="fas fa-suitcase"></i>
-                        <p>Prodi</p>
+                        <p>Program Studi</p>
                     </a>
                 </li>
-                <li class="nav-item {{ Request::is('pengguna') ? 'active' : '' }}">
+                <li class="nav-item {{ Request::is('pengguna*') ? 'active' : '' }}">
                     <a href="/pengguna">
                         <i class="fas fa-book-reader"></i>
                         <p>Pengguna</p>
                     </a>
                 </li>
-                <li class="nav-item {{ Request::is('akun') ? 'active' : '' }}">
+                <li class="nav-item {{ Request::is('akun*') ? 'active' : '' }}">
                     <a href="/akun">
                         <i class="fas fa-user-friends"></i>
                         <p>Akun</p>

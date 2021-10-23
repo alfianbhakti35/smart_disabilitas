@@ -33,9 +33,7 @@ Route::get('/kelas_e',[KelasController::class,'edit']);
 
 Route::resource('/fakultas', FakultasController::class);
 
-Route::get('/prodi', [ProdiController::class,'index']);
-Route::get('/prodi_t', [ProdiController::class,'create']);
-Route::get('/prodi_e', [ProdiController::class,'edit']);
+Route::resource('/prodi', ProdiController::class);
 
 Route::get('/pengguna',[PenggunaController::class,'index']);
 Route::post('/pengguna_e', [PenggunaController::class,'edit']);

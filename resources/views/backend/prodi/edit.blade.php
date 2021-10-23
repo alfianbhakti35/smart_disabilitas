@@ -25,21 +25,48 @@
                     <a href="/prodi" class="btn btn-warning float-right"><i class="fas fa-angle-left"></i> Kembali</a>
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form method="post" action="/prodi/{{ $prodi->id }}" enctype="multipart/form-data">
+                        @method('put')
+                        @csrf
+                        <div class="form-group">
+                            <label for="fakultas">Fakultas</label>
+                            <select class="form-control @error('fakultas_id') is-invalid @enderror" name="fakultas_id" id="fakultas_id" autofocus>
+                                <option value="">~ Pilih Fakultas ~</option>
+                            @foreach ($fakultas as $fakultas)
+                                 @if (old('fakultas_id', $prodi->nama)) == $fakultas->id)
+                                 <option value="{{ $fakultas->id }}" selected>{{ $fakultas->nama }}</option>
+                                 @else
+                                 <option value="{{ $fakultas->id }}">{{ $fakultas->nama }}</option>
+                                 @endif
+                             @endforeach
+                            </select>
+                            @error('fakultas_id')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
                        <div class="form-group">
-                           <label for="fakultas">Program Study</label>
+                           <label for="nama">nama program studi</label>
+                           <input type="text" name="nama" id="nama" placeholder="nama prodi" class="form-control  @error('nama') is-invalid @enderror" value="{{ old('nama', $prodi->nama) }}">
+                           @error('nama')
+                           <div class="invalid-feedback">
+                               {{ $message }}
+                           </div>
+                            @enderror
                        </div>
                        <div class="form-group">
-                           <label for="judul">Nama Program Study</label>
-                           <input type="text" name="prodi" id="" placeholder="Nama Program Study" class="form-control">
-                       </div>
-                       <div class="form-group">
-                        <label for="judul">Kode </label>
-                        <input type="text" name="prodi" id="" placeholder="Kode Program Study" class="form-control">
+                            <label for="kode">kode</label>
+                            <input type="text" name="kode" id="kode" placeholder="kode" class="form-control  @error('kode') is-invalid @enderror" value="{{ old('kode', $prodi->kode) }}">
+                            @error('kode')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
                         </div>
                         <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                        <button type="reset" class="btn btn-danger">Hapus</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <button type="reset" class="btn btn-danger">Hapus</button>
                         </div>
                     </form>
                 </div>
