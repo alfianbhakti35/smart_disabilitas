@@ -13,9 +13,11 @@ class ProdiController extends Controller
 
     public function index()
     {
+        $prodi = ProdiModel::all();
+        if($prodi)
         return view('backend.prodi.index',[
             "title" => "prodi",
-            "fakultas" => FakultasModel::all('id','nama')->pluck('id')->first(),
+            "fakultas" => FakultasModel::all(),
             "prodi" => ProdiModel::all()
         ]);
     }
@@ -43,7 +45,6 @@ class ProdiController extends Controller
         
         $validatedDate = $request->validate([
             'nama'  => 'required',
-            'kode' => 'required',
             'fakultas_id' => 'required'
         ]);
         
@@ -60,7 +61,6 @@ class ProdiController extends Controller
     {
         $validatedDate = $request->validate([
             'nama'  => 'required',
-            'kode' => 'required',
             'fakultas_id' => 'required'
         ]);
 

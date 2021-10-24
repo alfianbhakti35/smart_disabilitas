@@ -16,9 +16,9 @@ class CreateMatkulModelsTable extends Migration
         Schema::create('matkul_models', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('kode');
-            $table->integer('dosen_id');
+            $table->integer('user_id');
             $table->integer('prodi_id');
+            $table->integer('semester');
             $table->timestamps();
         });
     }

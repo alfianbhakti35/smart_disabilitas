@@ -17,7 +17,6 @@ class CreateFakultasModelsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nama');
-            $table->string('kode');
         });
     }
 

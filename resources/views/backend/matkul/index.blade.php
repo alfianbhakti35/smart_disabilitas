@@ -1,4 +1,4 @@
-@extends('backend/template/main')
+@extends('backend.template.main')
 
 @section('content')
 <div class="page-inner">
@@ -22,107 +22,55 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="/matkul_t" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
+                    <a href="/matkul/create" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="basic-datatables" class="display table table-striped table-hover" >
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Nama</th>
-                                    <th>Kode</th>
                                     <th>Dosen</th>
                                     <th>Program Studi</th>
+                                    <th>Semester</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
+                                    <th>#</th>
                                     <th>Nama</th>
-                                    <th>Kode</th>
                                     <th>Dosen</th>
                                     <th>Program Studi</th>
+                                    <th>Semester</th>
                                     <th>Action</th>
                                 </tr>
                             </tfoot>
                             <tbody>
+                                @foreach ($matkul as $matkul)
                                 <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr> 
-                                <tr>
-                                    <td>Orang</td>
-                                    <td>1</td>
-                                    <td>jupri</td>
-                                    <td>Teknik Informatika</td>
-                                    <td><a href="/matkul_e"><i class="fas fa-edit"></i> Edit</a> | <a class="text-danger" href=""><i class="fas fa-trash-alt"></i> Hapus</a></td>
-                                </tr>                                    
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $matkul->nama }}</td>
+                                    @foreach ($user as $u)
+                                        @if ($u->id == $matkul->user_id)
+                                        <td>{{ $u->name }}</td>
+                                        @endif
+                                    @endforeach
+                                    @foreach ($prodi as $p)
+                                        @if ($p->id == $matkul->prodi_id)
+                                        <td>{{ $p->nama }}</td>
+                                        @endif
+                                    @endforeach
+                                    <td>{{ $matkul->semester }}</td>
+                                    <td><a href="/matkul/{{ $matkul->id }}/edit"><i class="fas fa-edit"></i> Edit</a> | 
+                                        <form action="/matkul/{{ $matkul->id }}" method="post" class="d-inline">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="text-danger bg-transparent border-0" onclick="return confirm('Yakin ingin mengahpus?')"><i class="fas fa-trash-alt"></i> Hapus</button>
+                                        </form>
+                                </tr>   
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

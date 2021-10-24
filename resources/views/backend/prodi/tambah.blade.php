@@ -54,15 +54,6 @@
                            </div>
                             @enderror
                        </div>
-                       <div class="form-group">
-                            <label for="kode">Kode</label>
-                            <input type="text" name="kode" id="kode" placeholder="kode program studi" class="form-control  @error('kode') is-invalid @enderror" value="{{ old('kode') }}">
-                            @error('kode')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Simpan</button>
                             <button type="reset" class="btn btn-danger">Hapus</button>

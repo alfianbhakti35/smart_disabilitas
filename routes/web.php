@@ -23,25 +23,11 @@ Route::get('/dashboard',[AdminController::class,'index']);
 
 Route::resource('/materi', MateriController::class);
 
-Route::get('/matkul', [MatkulController::class, 'index']);
-Route::get('/matkul_t', [MatkulController::class, 'create']);
-Route::get('/matkul_e', [MatkulController::class, 'edit']);
-
-Route::get('/kelas',[KelasController::class,'index']);
-Route::get('/kelas_t',[KelasController::class,'create']);
-Route::get('/kelas_e',[KelasController::class,'edit']);
+Route::resource('/matkul', MatkulController::class);
 
 Route::resource('/fakultas', FakultasController::class);
 
 Route::resource('/prodi', ProdiController::class);
-
-Route::get('/pengguna',[PenggunaController::class,'index']);
-Route::post('/pengguna_e', [PenggunaController::class,'edit']);
-Route::post('/pengguna_t',[PenggunaController::class,'create']);
-
-Route::get('/akun',[AkunController::class,'index']); 
-Route::post('/akun_e',[AkunController::class,'edit']); 
-Route::post('/akun_t',[AkunController::class,'create']); 
 // Penutup Admin
 
 // Login dan Registrasi

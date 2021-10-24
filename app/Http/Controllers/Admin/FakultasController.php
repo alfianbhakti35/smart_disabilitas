@@ -39,7 +39,6 @@ class FakultasController extends Controller
         
         $validatedDate = $request->validate([
             'nama'  => 'required',
-            'kode' => 'required'
         ]);
         
         FakultasModel::create($validatedDate);
@@ -55,7 +54,6 @@ class FakultasController extends Controller
     {
         $validatedDate = $request->validate([
             'nama'  => 'required',
-            'kode' => 'required'
         ]);
 
         FakultasModel::where('id', $id)->update($validatedDate);

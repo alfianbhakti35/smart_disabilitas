@@ -17,7 +17,6 @@ class CreateProdiModelsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nama');
-            $table->string('kode');
             $table->integer('fakultas_id');
         });
     }

@@ -11,7 +11,6 @@ class ProdiModel extends Model
 
     protected $fillable = [
         'nama',
-        'kode',
         'fakultas_id'
     ];
 }

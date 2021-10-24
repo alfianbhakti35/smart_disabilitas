@@ -19,7 +19,7 @@ class RegistrasiController extends Controller
             'name' => 'required|min:5|max:255',
             'username' => 'required|min:5|max:255|unique:users',
             'password' => 'required|min:5|max:255',
-            'role' => 'required|min:5|max:255',
+            'level' => 'required|min:5|max:255',
         ]);
 
         $req['password'] = Hash::make($req['password']);

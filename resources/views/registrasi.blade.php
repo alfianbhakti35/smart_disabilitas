@@ -56,7 +56,7 @@
       <label for="password">Password</label>
     </div>
 
-    <input type="text" class="form-control" id="role" name="role" placeholder="Password" required hidden value="mahasiswa">
+    <input type="text" class="form-control" id="level" name="level" placeholder="Password" required hidden value="dosen">
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; Smart Disabilitas | 2021</p>

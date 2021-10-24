@@ -32,14 +32,12 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Nama Fakultas</th>
-                                    <th>Kode</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
                                     <th>#</th>
-                                    <th>Nama Fakultas</th>
-                                    <th>Kode</th>                              
+                                    <th>Nama Fakultas</th>                   
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -47,7 +45,6 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $fakultas->nama }}</td>
-                                    <td>{{ $fakultas->kode }}</td>
                                     <td><a href="/fakultas/{{ $fakultas->id }}/edit"><i class="fas fa-edit"></i> Edit</a> | 
                                         <form action="/fakultas/{{ $fakultas->id }}" method="post" class="d-inline">
                                         @method('delete')

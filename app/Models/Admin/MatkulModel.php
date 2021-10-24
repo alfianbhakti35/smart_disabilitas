@@ -11,8 +11,8 @@ class MatkulModel extends Model
 
     protected $fillable = [
         'nama',
-        'kode',
-        'dosen_id',
+        'user_id',
         'prodi_id',
+        'semester'
     ];
 }

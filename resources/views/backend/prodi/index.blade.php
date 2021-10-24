@@ -33,24 +33,25 @@
                                     <th>#</th>
                                     <th>Fakultas</th>
                                     <th>Nama prodi</th>
-                                    <th>Kode</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
                                     <th>#</th>
                                     <th>Fakultas</th>
-                                    <th>Nama prodi</th>
-                                    <th>Kode</th>                              
+                                    <th>Nama prodi</th>                        
                                 </tr>
                             </tfoot>
                             <tbody>
                                 @foreach ($prodi as $prodi)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $prodi->fakultas_id}}</td>
+                                    @foreach ($fakultas as $f)
+                                        @if ($f->id == $prodi->fakultas_id)
+                                        <td>{{ $f->nama }}</td>
+                                        @endif
+                                    @endforeach
                                     <td>{{ $prodi->nama }}</td>
-                                    <td>{{ $prodi->kode }}</td>
                                     <td><a href="/prodi/{{ $prodi->id }}/edit"><i class="fas fa-edit"></i> Edit</a> | 
                                         <form action="/prodi/{{ $prodi->id }}" method="post" class="d-inline">
                                         @method('delete')

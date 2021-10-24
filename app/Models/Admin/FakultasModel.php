@@ -11,6 +11,5 @@ class FakultasModel extends Model
 
     protected $fillable = [
         'nama',
-        'kode',
     ];
 }
