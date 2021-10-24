@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Materi</h4>
-                    <a href="/materi/create" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
+                    <a href="/dosen/materi/create" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Tambah data</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -33,8 +33,6 @@
                                     <th>#</th>
                                     <th>Mata Kuliah</th>
                                     <th>Judul</th>
-                                    <th>File</th>
-                                    <th>Jenis</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -43,8 +41,6 @@
                                     <th>#</th>
                                     <th>Mata Kuliah</th>
                                     <th>Judul</th>
-                                    <th>File</th>
-                                    <th>Jenis</th>
                                     <th>Action</th>
                                 </tr>
                             </tfoot>
@@ -52,10 +48,12 @@
                                 @foreach ($materi as $materi)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $materi->matkul_id }}</td>
+                                    @foreach ($matkul as $m)
+                                        @if ($m->id == $materi->matkul_id)
+                                        <td>{{ $m->nama }}</td>
+                                        @endif
+                                    @endforeach
                                     <td>{{ $materi->judul_materi }}</td>
-                                    <td><a href="{{ $materi->file_materi }}">{{ $materi->judul_materi }}.pdf</a></td>
-                                    <td>{{ $materi->jenis_materi }}</td>
                                     <td><a href="/dosen/materi/{{ $materi->id }}/edit"><i class="fas fa-edit"></i> Edit</a> | 
                                         <form action="/dosen/materi/{{ $materi->id }}" method="post" class="d-inline">
                                         @method('delete')

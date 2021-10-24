@@ -20,7 +20,8 @@ class MateriController extends Controller
     {
         return view('dosen.materi.index',[
             "title" => "Materi",
-            "materi" => MateriModel::all()
+            "materi" => MateriModel::all(),
+            "matkul" => MatkulModel::all()
         ]);
     }
 
@@ -76,12 +77,28 @@ class MateriController extends Controller
             'judul_materi' => 'required',
             'materi_slowlearning' => 'required'
         ]);
+        
+        if($request->file('materi_tunanetra') && $request->file('materi_tunarungu')){
 
-        if($request->file('materi_tunanetra') || $request->file('materi_tunarungu')){
-            if($request->oldfile){
-                Storage::delete($request->oldfile);
+            if($request->oldmateri_tunanetra && $request->oldmateri_tunarungu){
+                Storage::delete($request->oldmateri_tunanetra);
+                Storage::delete($request->oldmateri_tunarungu);
             }
             $validatedDate['materi_tunanetra'] = $request->file('materi_tunanetra')->store('/public/materi');
+            $validatedDate['materi_tunarungu'] = $request->file('materi_tunarungu')->store('/public/materi');
+        }
+        else if($request->file('materi_tunanetra')){
+
+            if($request->oldmateri_tunanetra){
+                Storage::delete($request->oldmateri_tunanetra);
+            }
+            $validatedDate['materi_tunanetra'] = $request->file('materi_tunanetra')->store('/public/materi');
+        }
+        else if($request->file('materi_tunarungu')){
+            
+            if($request->oldmateri_tunarungu){
+                Storage::delete($request->oldmateri_tunarungu);
+            }
             $validatedDate['materi_tunarungu'] = $request->file('materi_tunarungu')->store('/public/materi');
         }
 

@@ -1,4 +1,4 @@
-@extends('backend/template/main')
+@extends('dosen.template.main')
 
 @section('content')
 <div class="page-inner">
@@ -22,22 +22,21 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="/materi" class="btn btn-warning float-right"><i class="fas fa-angle-left"></i> Kembali</a>
+                    <a href="/dosen/materi" class="btn btn-warning float-right"><i class="fas fa-angle-left"></i> Kembali</a>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="/materi/{{ $materi->id }}" enctype="multipart/form-data">
+                    <form method="post" action="/dosen/materi/{{ $materi->id }}" enctype="multipart/form-data">
                         @method('put')
                         @csrf
                        <div class="form-group">
                            <label for="matkul">Mata Kuliah</label>
                            <select class="form-control @error('matkul_id') is-invalid @enderror" name="matkul_id" id="matkul_id" autofocus>
-                            <option value="1">~ Pilih Jenis Materi ~</option>
+                            <option value="">~ Pilih Mata Kuliah ~</option>
                             @foreach ($matkul as $matkul)
-                                @if (old('matkul_id', $materi->matkul_id) == $matkul->id)
-                                <option value="{{ $matkul->id }}" selected>{{ $matkul->name }}</option>
+                                @if (old('matkul_id',$matkul->nama)) == $matkul->id)
+                                <option value="{{ $matkul->id }}" selected>{{ $matkul->nama }}</option>
                                 @else
-                                <option value="">~ Pilih Mata Kuliah ~</option>
-                                <option value="{{ $matkul->id }}">{{ $matkul->name }}</option>
+                                <option value="{{ $matkul->id }}">{{ $matkul->nama }}</option>
                                 @endif
                             @endforeach
                            </select>
@@ -56,44 +55,37 @@
                            </div>
                             @enderror
                        </div>
-                        <div class="form-group">
-                            <label for="file_m">File Materi</label>
-                            <input type="hidden" name="oldfile" value="{{ old('file_materi', $materi->file_materi) }}">
-                            <input type="file" name="file_materi" id="file_materi" placeholder="File Materi" class="form-control @error('file_materi') is-invalid @enderror" value="{{ old('file_materi', $materi->file_materi) }}">
-                            @error('file_materi')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="jenis_m">Jenis Materi</label>
-                            <select class="form-control @error('jenis_materi') is-invalid @enderror" name="jenis_materi" id="jenis_materi">
-                                @if (old('jenis_materi', $materi->jenis_materi) == "Tuna Netra")
-                                <option value="Tuna Netra" selected>Tuna Netra</option>
-                                <option value="Tuna Rungu">Tuna Rungu</option>
-                                <option value="Slow Learning">Slow Learning</option>
-                                @elseif (old('jenis_materi', $materi->jenis_materi) == "Tuna Rungu")                                
-                                <option value="Tuna Netra">Tuna Rungu</option>
-                                <option value="Tuna Rungu" selected>Tuna Rungu</option>
-                                <option value="Slow Learning">Slow Learning</option>
-                                @elseif (old('jenis_materi', $materi->jenis_materi) == "Tuna Netra")
-                                <option value="Tuna Netra">Tuna Netra</option>
-                                <option value="Tuna Rungu">Tuna Rungu</option>
-                                <option value="Slow Learning" selected>Slow Learning</option>
-                                @else 
-                                <option value="">~ Pilih Jenis Materi ~</option>
-                                <option value="Tuna Netra">Tuna Netra</option>
-                                <option value="Tuna Rungu">Tuna Rungu</option>
-                                <option value="Slow Learning">Slow Learning</option>
-                                @endif
-                            </select>
-                            @error('jenis_materi')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                        </div>
+                       <div class="form-group">
+                           <label for="materi_tunanetra">Materi Tuna Netra</label>
+                           <input type="file" name="materi_tunanetra" id="materi_tunanetra" placeholder="Audio Materi" class="form-control @error('materi_tunanetra') is-invalid @enderror" value="{{ old('materi_tunanetra', $materi->materi_tunanetra) }}">
+                           <input type="hidden" name="oldmateri_tunanetra" value="{{ $materi->materi_tunanetra }}">
+                           <p>*Materi Audio</p>
+                           @error('materi_tunanetra')
+                           <div class="invalid-feedback">
+                               {{ $message }}
+                           </div>
+                       @enderror
+                       </div>
+                       <div class="form-group">
+                           <label for="materi_tunarungu">Materi Tuna Rungu</label>
+                           <input type="file" name="materi_tunarungu" id="materi_tunarungu" placeholder="Video Materi" class="form-control @error('materi_tunarungu') is-invalid @enderror" value="{{ old('materi_tunarungu', $materi->materi_tunarungu) }}">
+                           <input type="hidden" name="oldmateri_tunarungu" value="{{ $materi->materi_tunarungu }}">
+                           <p>*Materi PDF</p>
+                           @error('materi_tunarungu')
+                           <div class="invalid-feedback">
+                               {{ $message }}
+                           </div>
+                       @enderror
+                       </div>
+                       <div class="form-group">
+                           <label for="materi_slowlearning">Slow Learning</label>
+                           <input type="text" name="materi_slowlearning" id="materi_slowlearning" placeholder="Url Video" class="form-control  @error('materi_slowlearning') is-invalid @enderror" value="{{ old('materi_slowlearning', $materi->materi_slowlearning) }}">
+                           @error('materi_slowlearning')
+                           <div class="invalid-feedback">
+                               {{ $message }}
+                           </div>
+                            @enderror
+                       </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Simpan</button>
                             <button type="reset" class="btn btn-danger">Hapus</button>
