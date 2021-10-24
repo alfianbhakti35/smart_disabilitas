@@ -13,6 +13,8 @@ use App\Http\Controllers\Admin\ProdiController;
 use App\Http\Controllers\Admin\MateriController;
 use App\Http\Controllers\Admin\MatkulController;
 use App\Http\Controllers\Admin\PenggunaController;
+use App\Http\Controllers\Dosen\DashboardController as DosenDashboardController;
+use App\Http\Controllers\Dosen\MateriController as DosenMateriController;
 use App\Http\Controllers\Mahasiswa\DashboardController;
 use App\Http\Controllers\Mahasiswa\MateriController as MahasiswaMateriController;
 
@@ -29,6 +31,13 @@ Route::resource('/fakultas', FakultasController::class);
 
 Route::resource('/prodi', ProdiController::class);
 // Penutup Admin
+
+// Dosen
+Route::get('/dosen/dashboard',[DosenDashboardController::class,'index']);
+
+Route::resource('/dosen/materi', DosenMateriController::class);
+
+// Penutup Dosen
 
 // Login dan Registrasi
 Route::get('/login', [LoginController::class, 'index']);

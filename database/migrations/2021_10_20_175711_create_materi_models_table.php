@@ -17,8 +17,9 @@ class CreateMateriModelsTable extends Migration
             $table->id();
             $table->integer('matkul_id');
             $table->string('judul_materi');
-            $table->string('file_materi');
-            $table->string('jenis_materi');
+            $table->string('materi_tunarungu');
+            $table->string('materi_tunanetra');
+            $table->string('materi_slowlearning');
             $table->timestamps();
         });
     }

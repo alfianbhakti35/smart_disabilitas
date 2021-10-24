@@ -1,4 +1,4 @@
-@extends('backend/template/main')
+@extends('dosen.template.main')
 
 @section('content')
 <div class="page-inner">
@@ -33,6 +33,8 @@
                                     <th>#</th>
                                     <th>Mata Kuliah</th>
                                     <th>Judul</th>
+                                    <th>File</th>
+                                    <th>Jenis</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -41,6 +43,8 @@
                                     <th>#</th>
                                     <th>Mata Kuliah</th>
                                     <th>Judul</th>
+                                    <th>File</th>
+                                    <th>Jenis</th>
                                     <th>Action</th>
                                 </tr>
                             </tfoot>
@@ -48,14 +52,12 @@
                                 @foreach ($materi as $materi)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    @foreach ($matkul as $m)
-                                        @if ($m->id == $materi->matkul_id)
-                                        <td>{{ $m->nama }}</td>
-                                        @endif
-                                    @endforeach
+                                    <td>{{ $materi->matkul_id }}</td>
                                     <td>{{ $materi->judul_materi }}</td>
-                                    <td><a href="/materi/{{ $materi->id }}/edit"><i class="fas fa-edit"></i> Edit</a> | 
-                                        <form action="/materi/{{ $materi->id }}" method="post" class="d-inline">
+                                    <td><a href="{{ $materi->file_materi }}">{{ $materi->judul_materi }}.pdf</a></td>
+                                    <td>{{ $materi->jenis_materi }}</td>
+                                    <td><a href="/dosen/materi/{{ $materi->id }}/edit"><i class="fas fa-edit"></i> Edit</a> | 
+                                        <form action="/dosen/materi/{{ $materi->id }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button class="text-danger bg-transparent border-0" onclick="return confirm('Yakin ingin mengahpus?')"><i class="fas fa-trash-alt"></i> Hapus</button>

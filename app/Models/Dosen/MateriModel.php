@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Admin;
+namespace App\Models\Dosen;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,5 +16,4 @@ class MateriModel extends Model
         'materi_tunarungu',
         'materi_slowlearning',
     ];
-
 }

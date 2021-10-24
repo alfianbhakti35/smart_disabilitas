@@ -1,37 +1,32 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dosen;
 
-use Spatie\PdfToText\Pdf;
+use App\Http\Controllers;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use App\Models\Admin\MateriModel;
 use App\Models\Admin\MatkulModel;
+use App\Models\Dosen\MateriModel;
 use Illuminate\Routing\Controller;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
 class MateriController extends Controller
 {
-   
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return view('backend.materi.index',[
+        return view('dosen.materi.index',[
             "title" => "Materi",
-            "materi" => MateriModel::all(),
-            "matkul" => MatkulModel::all()
+            "materi" => MateriModel::all()
         ]);
-    }
-
-    public function pdfTotext()
-    {
-        $path = 'c:/Program Files/Git/mingw64/bin/pdftotext';
-        echo Pdf::getText('book.pdf', $path);
     }
 
     public function edit($id)
     {
-        return view('backend.materi.edit',[
+        return view('dosen.materi.edit',[
             "title" => "Materi",
             "matkul" => MatkulModel::all(),
             "materi" => MateriModel::where('id',$id)->first()
@@ -40,7 +35,7 @@ class MateriController extends Controller
     
     public function create()
     {
-        return view('backend.materi.tambah',[
+        return view('dosen.materi.tambah',[
             "title" => "Materi",
             "matkul" => MatkulModel::all()
         ]);
@@ -67,7 +62,7 @@ class MateriController extends Controller
 
         MateriModel::create($validatedDate);
 
-        return redirect('/materi')->with('success','New materi has been addedd!');
+        return redirect('/dosen/materi')->with('success','New materi has been addedd!');
     }
 
     public function show($id){
@@ -75,56 +70,36 @@ class MateriController extends Controller
     }
 
     public function update(Request $request,$id)
-    {        
+    {
         $validatedDate = $request->validate([
             'matkul_id'  => 'required',
             'judul_materi' => 'required',
             'materi_slowlearning' => 'required'
         ]);
-        
-        if($request->file('materi_tunanetra') && $request->file('materi_tunarungu')){
 
-            if($request->oldmateri_tunanetra && $request->oldmateri_tunarungu){
-                Storage::delete($request->oldmateri_tunanetra);
-                Storage::delete($request->oldmateri_tunarungu);
+        if($request->file('materi_tunanetra') || $request->file('materi_tunarungu')){
+            if($request->oldfile){
+                Storage::delete($request->oldfile);
             }
             $validatedDate['materi_tunanetra'] = $request->file('materi_tunanetra')->store('/public/materi');
-            $validatedDate['materi_tunarungu'] = $request->file('materi_tunarungu')->store('/public/materi');
-        }
-        else if($request->file('materi_tunanetra')){
-
-            if($request->oldmateri_tunanetra){
-                Storage::delete($request->oldmateri_tunanetra);
-            }
-            $validatedDate['materi_tunanetra'] = $request->file('materi_tunanetra')->store('/public/materi');
-        }
-        else if($request->file('materi_tunarungu')){
-            
-            if($request->oldmateri_tunarungu){
-                Storage::delete($request->oldmateri_tunarungu);
-            }
             $validatedDate['materi_tunarungu'] = $request->file('materi_tunarungu')->store('/public/materi');
         }
 
         MateriModel::where('id', $id)->update($validatedDate);
 
-        return redirect('/materi')->with('success','Materi has been update!');
+        return redirect('/dosen/materi')->with('success','Materi has been update!');
     }
 
     public function destroy($id)
     {   
-        
-        $data = MateriModel::where('id',$id)->first()->materi_tunanetra;
-        if($data){
-            Storage::delete($data);
-        }
         $data = MateriModel::where('id',$id)->first()->materi_tunarungu;
+        $data = MateriModel::where('id',$id)->first()->materi_tunanetra;
         if($data){
             Storage::delete($data);
         }
 
         MateriModel::destroy($id);
 
-        return redirect('/materi')->with('success','Materi has been delted!');
+        return redirect('/dosen/materi')->with('success','Materi has been delted!');
     }
 }
